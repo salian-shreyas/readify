@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(193, 193, 193, 0.3);
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.9);
+    font-weight: 300;
+}
+
+.controls {
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.mood-section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.mood-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.mood-btn {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+}
+
+.mood-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(136, 129, 127, 0.4);
+}
+
+.mood-btn.active {
+    background: linear-gradient(45deg, #10ac84, #00d2d3);
+    box-shadow: 0 5px 15px rgba(106, 155, 143, 0.3);
+}
