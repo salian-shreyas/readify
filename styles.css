@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -237,6 +237,92 @@ body {
     color: #777;
 }
 
+.purchase-links {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.purchase-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.purchase-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.purchase-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    min-width: 80px;
+    justify-content: center;
+}
+
+.purchase-btn:hover {
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.amazon-btn {
+    background: linear-gradient(45deg, #ff9500, #ff6600);
+    color: white;
+    box-shadow: 0 3px 10px rgba(255, 149, 0, 0.3);
+}
+
+.amazon-btn:hover {
+    box-shadow: 0 5px 15px rgba(255, 149, 0, 0.4);
+    color: white;
+}
+
+.google-btn {
+    background: linear-gradient(45deg, #4285f4, #34a853);
+    color: white;
+    box-shadow: 0 3px 10px rgba(66, 133, 244, 0.3);
+}
+
+.google-btn:hover {
+    box-shadow: 0 5px 15px rgba(66, 133, 244, 0.4);
+    color: white;
+}
+
+.barnes-btn {
+    background: linear-gradient(45deg, #00704a, #228b22);
+    color: white;
+    box-shadow: 0 3px 10px rgba(0, 112, 74, 0.3);
+}
+
+.barnes-btn:hover {
+    box-shadow: 0 5px 15px rgba(0, 112, 74, 0.4);
+    color: white;
+}
+
+.goodreads-btn {
+    background: linear-gradient(45deg, #663300, #8b4513);
+    color: white;
+    box-shadow: 0 3px 10px rgba(102, 51, 0, 0.3);
+}
+
+.goodreads-btn:hover {
+    box-shadow: 0 5px 15px rgba(102, 51, 0, 0.4);
+    color: white;
+}
+
 .rating {
     display: flex;
     align-items: center;
@@ -254,6 +340,7 @@ body {
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 
+/* Animations */
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -286,6 +373,7 @@ body {
     50% { opacity: 0.7; }
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .logo {
         font-size: 2.5rem;
@@ -303,5 +391,27 @@ body {
     .primary-btn, .secondary-btn {
         width: 100%;
         max-width: 250px;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    .controls {
+        padding: 20px;
+    }
+    
+    .book-card {
+        padding: 20px;
+    }
+    
+    .purchase-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .purchase-btn {
+        width: 100%;
+        max-width: 200px;
     }
 }
