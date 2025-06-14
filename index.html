@@ -8,28 +8,39 @@
     <script src="script/script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Readify</h1>
-    </header>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">📚 Readify</h1>
+            <p class="tagline">Discover your next great read based on your mood</p>
+        </header>
 
-    <main>
-        <div class="container">
-            <div class="suggest">
-                <div class="quote">
-                    <blockquote>
-                        <p>Think before you speak. Read before you think.</p>
-                    </blockquote>
-                    <p>—Fran Lebowitz</p>
+        <div class="controls">
+            <div class="mood-section">
+                <h2 class="section-title">How are you feeling today?</h2>
+                <div class="mood-grid" id="moodGrid">
+                    <button class="mood-btn" data-mood="adventure">🌟 Adventure</button>
+                    <button class="mood-btn" data-mood="romance">💕 Romance</button>
+                    <button class="mood-btn" data-mood="mystery">🔍 Mystery</button>
+                    <button class="mood-btn" data-mood="fantasy">🧙‍♂️ Fantasy</button>
+                    <button class="mood-btn" data-mood="science">🔬 Science</button>
+                    <button class="mood-btn" data-mood="history">📜 History</button>
+                    <button class="mood-btn" data-mood="self-help">🌱 Self Help</button>
+                    <button class="mood-btn" data-mood="horror">👻 Horror</button>
                 </div>
-                <button>Suggest me book!</button>
             </div>
-            <div class="image">
-                <img src="./book-img.jpeg" alt="stack of books">
-            </div>
-            <div class="img"></div>
-        </div>
-    </main>
 
-    <footer></footer>
+            <div class="action-buttons">
+                <button class="primary-btn" id="getMoodBooks">Get Books for My Mood</button>
+                <button class="secondary-btn" id="getRandomBooks">Surprise Me!</button>
+            </div>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p style="color: white; font-size: 1.2rem;">Finding perfect books for you...</p>
+        </div>
+
+        <div id="results" class="results"></div>
+    </div>
 </body>
 </html>
